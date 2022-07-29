@@ -4342,7 +4342,7 @@ app.isotope = {
     buttonFilter = void 0;
     qsRegex = void 0;
     $grid = $('.grid').isotope({
-      itemSelector: '.section__card',
+      itemSelector: '.col-xs-6',
       layoutMode: 'masonry',
       filter: function() {
         var $this, buttonResult, searchResult;
@@ -4385,7 +4385,7 @@ app.isotope = {
       $grid.isotope();
       app.scroll.dscroll;
     });
-    $('.section__filters').on('click', '.section__tag', function() {
+    $('.dashboard__filters').on('click', '.dashboard__filter', function() {
       var $buttonGroup, $this, filterGroup;
       $this = $(this);
       $buttonGroup = $this.parents('.button-group');
@@ -4394,7 +4394,7 @@ app.isotope = {
       buttonFilter = concatValues(buttonFilters);
       $grid.isotope();
       app.scroll.dscroll;
-      $(this).parents(".section__filters").find(".current").removeClass("current");
+      $(this).parents(".dashboard__filters").find(".current").removeClass("current");
       $(this).addClass("current");
     });
     $quicksearch = $('.quicksearch').keyup(debounce(function() {
