@@ -1981,8 +1981,17 @@ article .article__description {
   font-weight: 400;
 }
 .dashboard .dashboard__body .dashboard__map {
+  display: block;
+  height: 70vh;
+  margin-top: 10px;
+  width: 100%;
   background-color: #fff;
-  padding-bottom: 50%;
+}
+.dashboard .dashboard__body .dashboard__map .dashboard__map__map {
+  display: block;
+  height: 70vh;
+  margin-top: 10px;
+  width: 100%;
 }
 .dashboard .dashboard__body .dashboard__blog {
   background-color: #fff;

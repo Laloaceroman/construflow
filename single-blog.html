@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <link href="img/favicon.png" rel="shortcut icon">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href="css/main.css?v=9673" rel="stylesheet" type="text/css">
-    <script src="js/main.js?v=9673" type="text/javascript"></script>
+    <link href="css/main.css?v=90029" rel="stylesheet" type="text/css">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css" rel="stylesheet">
+    <script src="js/main.js?v=90029" type="text/javascript"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js"></script>
     <!-- Meta tags facebook-->
     <meta property="og:title" content="#">
     <meta property="og:description" content="#">
@@ -19,6 +21,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&amp;display=swap" rel="stylesheet">
+    <!--mapbox-->
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js"></script>
+    <script src="https://unpkg.com/es6-promise@4.2.4/dist/es6-promise.auto.min.js"></script>
+    <script src="https://unpkg.com/@mapbox/mapbox-sdk/umd/mapbox-sdk.min.js"></script>
   </head>
   <body>
     <div id="sections">
@@ -52,7 +58,7 @@
                 </div>
                 <div class="dashboard__help__body">
                   <h4>¿Necesitas ayuda?</h4>
-                  <p>Accumsan ullamcorper luctus sed volutpat adipiscing iaculis nam curae sociosqu est dui molestie himenaeos himenaeos.
+                  <p>Torquent donec donec leo nunc consequat turpis posuere adipiscing nisi risus sodales sodales ante sollicitudin.
                   </p><a href="#" class="btn btn--sm btn--secondary">Ver más<span class="fa fa-angle-right"></span></a>
                 </div>
               </div>
@@ -66,30 +72,30 @@
                     <div class="dashboard__singleblog__header"> 
                       <div class="dashboard__singleblog__tag">IFC</div>
                       <h3>Administrativo</h3>
-                      <p>Suspendisse augue mollis ultricies mauris placerat euismod purus primis colus. Suscipit potenti cubilia sociosqu ac diam auctor dictum faucibus morbi gravida euismod eros ultrices litora.
+                      <p>Conubia pellentesque accumsan taciti lectus lacinia elementum commodo himenaeos aliquam. Scelerisque nibh lacus class vel quisque posuere proin molestie ad vitae justo aenean mollis vel.
                       </p>
                     </div>
                     <div class="dashboard__singleblog__body">
                       <div class="dashboard__content">
-                        <h4>Conubia augue hendrerit tellus nullam ultrices
+                        <h4>Fringilla feugiat tempor nam nec eget
                         </h4>
-                        <p>Pharetra rutrum posuere hac bibendum justo nulla vestibulum primis tellus. Ante enim lobortis class sem inceptos sapien aliquam ut mollis. Quisque duis congue proin a imperdiet sed a vel quis. Habitant urna habitant lacinia vivamus quam sodales porta consequat ligula malesuada tellus risus vestibulum vitae.
+                        <p>Massa conubia molestie urna laoreet consectetur torquent adipiscing inceptos eu. Lacus aliquam fusce integer convallis per leo viverra iaculis potenti. At semper proin mollis sagittis eros auctor laoreet dictumst arcu. Per gravida hac elit maecenas velit orci libero turpis conubia tempus a libero felis maecenas.
                         </p>
-                        <p>Class metus platea enim quisque ornare ac congue elit mattis. Ornare ut commodo massa habitant eget quisque nostra ornare turpis. Fermentum eu nibh ut mattis sed dui tristique proin odio. Pulvinar felis vitae arcu vivamus volutpat at laoreet viverra lacinia. Praesent nec auctor etiam viverra aenean pulvinar leo fringilla donec. Integer lacinia aliquam primis potenti fringilla potenti metus nisl eu mi duis eros arcu leo.
+                        <p>Urna class consequat nostra quisque nibh curabitur nisi potenti habitant. Class pretium etiam torquent hac pharetra habitant conubia ut non. Elit aliquam ultricies curabitur auctor tempus donec aenean eget nulla. In libero eleifend condimentum et curae ut aliquam semper sagittis. Erat dictum quisque dui mi curabitur vitae id aenean pharetra. Semper facilisis nulla litora diam ultrices euismod vestibulum vivamus et condimentum torquent eleifend primis aliquet.
                         </p>
-                        <p>Bibendum phasellus nostra ligula egestas mattis quisque habitasse condimentum imperdiet. Justo sollicitudin tempus tellus curabitur potenti nostra per vivamus nisl mauris iaculis condimentum hendrerit duis.
+                        <p>Habitant netus hac aptent interdum tortor ad hac dictumst nostra. Libero integer justo sagittis habitant cras per congue porta quisque at aenean hac dictum purus.
                         </p>
-                        <p>Donec vestibulum mollis suscipit at quisque ante mi ante aenean. Viverra rutrum arcu torquent suscipit vestibulum egestas massa diam nunc. Vulputate class quisque adipiscing fringilla faucibus at laoreet faucibus blandit. Volutpat fringilla pellentesque tincidunt primis mollis vitae interdum torquent praesent non etiam tortor donec ultricies.
+                        <p>Bibendum ut malesuada sem cursus faucibus odio taciti tempor etiam. Nulla odio condimentum velit molestie porttitor aenean mattis aliquam adipiscing. Id potenti ultricies tincidunt aenean justo feugiat phasellus condimentum nibh. Facilisis sollicitudin integer cursus aliquam colus hac donec habitasse dui nisl etiam senectus aptent sed.
                         </p><img src="img/uploads/1.jpg">
-                        <p>Quisque ac porta cras lobortis vulputate a laoreet sem consequat. Nibh vitae rhoncus adipiscing aliquet sem semper elementum aliquet ligula. Aliquet colus ornare iaculis consectetur bibendum molestie nisl odio curabitur. Aptent dui aptent consequat feugiat consequat varius accumsan risus libero. Posuere luctus pretium primis urna sollicitudin tincidunt elit phasellus magna. Dapibus non quis faucibus consequat mattis suspendisse felis interdum turpis quisque risus semper nostra gravida.
+                        <p>Aliquam adipiscing euismod fusce et metus aliquam at praesent netus. Mauris vestibulum donec condimentum torquent colus litora commodo consectetur sagittis. Pulvinar purus blandit dictumst facilisis consequat elementum sagittis magna curae. Nunc magna vitae per vivamus dui varius adipiscing lacinia et. Sodales imperdiet aenean nisl tincidunt elit neque ac odio habitant. Primis varius cubilia vestibulum platea donec eu etiam nam odio senectus elementum aptent consequat himenaeos.
                         </p>
-                        <p>Magna venenatis fermentum netus ultrices eget sem enim luctus ultricies. Class ornare ullamcorper proin aliquet viverra gravida et ultricies nullam elementum nostra nullam himenaeos potenti.
+                        <p>Ultricies arcu sem fames accumsan in augue luctus facilisis platea. Molestie donec arcu sodales aliquam aenean torquent vel habitasse condimentum tincidunt condimentum urna elit nullam.
                         </p>
-                        <p>Colus blandit ante ligula suscipit condimentum eget purus nisl tortor. Nibh purus euismod cras ornare sociosqu magna eros suspendisse suscipit. Ut cubilia sem pharetra ac enim quam litora varius elit. Nibh a litora inceptos at senectus aenean augue faucibus ultricies tellus auctor donec etiam sed.
+                        <p>Ullamcorper sem lacinia imperdiet netus integer aliquam interdum fusce convallis. Malesuada eu arcu faucibus urna libero condimentum magna nisl cursus. Ligula nec purus nam mi enim nullam tempus augue tempor. Etiam odio sodales pharetra faucibus ut mattis pellentesque iaculis ut metus adipiscing bibendum tempus inceptos.
                         </p>
-                        <h4>Non netus nulla malesuada aliquam venenatis
+                        <h4>Urna nisi ultricies neque mauris mi
                         </h4>
-                        <p>Metus nisi mollis curabitur pretium vulputate erat consequat elementum cras. Consequat pharetra eleifend rhoncus sed donec facilisis tempus arcu placerat eu eros ullamcorper platea torquent.
+                        <p>Est donec sapien platea euismod elit est aenean ornare felis. Tortor sem nam aenean nunc pharetra magna placerat libero arcu diam accumsan consectetur nec mattis.
                         </p>
                         <ul> 
                           <li><a href="single-blog.html">Solicitud de IFC Según DFL N°458 Art. 55 LGUC</a></li>

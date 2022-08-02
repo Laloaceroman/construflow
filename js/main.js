@@ -4412,6 +4412,104 @@ app.isotope = {
   }
 };
 
+app.mapbox = {
+  init: function() {
+    var mapboxClient;
+    if ($(".sectionmapbox").length) {
+      mapboxgl.accessToken = 'pk.eyJ1IjoiZWR1YWNldmVkb3JvbWFuIiwiYSI6ImNsNmNvdGt6djFvZzkzZXAzdm54M285dGsifQ.QHixm7CnepFjAQBpHnoj-A';
+      mapboxClient = mapboxSdk({
+        accessToken: mapboxgl.accessToken
+      });
+      mapboxClient.geocoding.forwardGeocode({
+        query: 'padre mariano 10, santiago, chile',
+        autocomplete: false,
+        limit: 1
+      }).send().then(function(response) {
+        var cont, lat_final, lat_prom, lng_final, lng_prom;
+        if (response && response.body && response.body.features && response.body.features.length) {
+          lng_prom = 0;
+          lat_prom = 0;
+          lng_final = 0;
+          lat_final = 0;
+          cont = 0;
+          $map = new mapboxgl.Map({
+            container: 'sectionmapbox',
+            style: 'mapbox://styles/eduacevedoroman/cl27pkfir002o14nw0mw5lsbo',
+            center: [-70.64827, -33.45694],
+            zoom: 10
+          });
+          $map.addControl(new mapboxgl.NavigationControl());
+          return $map.on('popupclose', function(e) {
+            return map.setView([36.83711, -2.464459], 5);
+          });
+        }
+      });
+    }
+    $('#checkbox_repeat').on('change', function() {
+      if (this.checked) {
+        $(".section__map").addClass("section__map--show");
+        return app.mapbox.init();
+      } else {
+        return $(".section__map").removeClass("section__map--show");
+      }
+    });
+    return $('[data-open-map]').on('click', function() {
+      if ($(this).hasClass("btn--blocked")) {
+        $(".section__map").addClass("section__map--show");
+        $(this).removeClass("btn--blocked");
+        return $(this).addClass("btn--dark");
+      } else {
+        $(".section__map").removeClass("section__map--show");
+        $(this).addClass("btn--blocked");
+        return $(this).removeClass("btn--dark");
+      }
+    });
+  },
+  deletePines: function() {
+    var i;
+    if ($pinesMarkers !== null) {
+      i = 0;
+      while (i < $pinesMarkers.length) {
+        $pinesMarkers[i].remove();
+        i++;
+      }
+    }
+    $pinesMarkers = [];
+    return $pines = [];
+  },
+  addPines: function() {
+    return $(".article--smart--small").each(function() {
+      var color, img, lat, lat_int, link, lng, lng_int, marker, price, title;
+      if ($(this).attr("data-lng").length && $(this).attr("data-lat").length) {
+        lng = $(this).attr("data-lng");
+        lat = $(this).attr("data-lat");
+        title = $(this).find(".article__title").text();
+        img = $(this).find("img").attr("src");
+        price = $(this).find(".article__price .article__price__div").attr("data-price");
+        link = $(this).find(".article__body a").attr("href");
+        lng_int = parseFloat(lng);
+        lat_int = parseFloat(lat);
+        $pines.push([lng_int, lat_int]);
+        if ($(this).hasClass("article--smart--outstanding")) {
+          color = "#30357E";
+        } else {
+          color = "#EC7A25";
+        }
+        marker = (new mapboxgl.Marker({
+          color: color
+        })).setLngLat([lng_int, lat_int]).setPopup(new mapboxgl.Popup({
+          offset: 25
+        }).setHTML('<img src="' + img + '"><h3>' + title + '</h3><p>' + price + '</p> <a href="' + link + '" >Ver más </a>')).addTo($map);
+        return $pinesMarkers.push(marker);
+      }
+    });
+  },
+  showPines: function() {
+    console.log("mostrando pines");
+    return console.log($pinesMarkers);
+  }
+};
+
 app.modal = {
   init: function() {
     $(".modal__close").click(function() {

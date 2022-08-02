@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <link href="img/favicon.png" rel="shortcut icon">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href="css/main.css?v=36221" rel="stylesheet" type="text/css">
-    <script src="js/main.js?v=36221" type="text/javascript"></script>
+    <link href="css/main.css?v=26160" rel="stylesheet" type="text/css">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css" rel="stylesheet">
+    <script src="js/main.js?v=26160" type="text/javascript"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js"></script>
     <!-- Meta tags facebook-->
     <meta property="og:title" content="#">
     <meta property="og:description" content="#">
@@ -19,6 +21,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&amp;display=swap" rel="stylesheet">
+    <!--mapbox-->
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js"></script>
+    <script src="https://unpkg.com/es6-promise@4.2.4/dist/es6-promise.auto.min.js"></script>
+    <script src="https://unpkg.com/@mapbox/mapbox-sdk/umd/mapbox-sdk.min.js"></script>
   </head>
   <body>
     <div id="sections">
@@ -52,7 +58,7 @@
                 </div>
                 <div class="dashboard__help__body">
                   <h4>¿Necesitas ayuda?</h4>
-                  <p>Curabitur varius cursus ullamcorper curae ante nec dui augue colus venenatis ultricies malesuada libero dictumst.
+                  <p>Turpis fames lacus ligula lacus pharetra feugiat eget a dapibus at ullamcorper massa venenatis ante.
                   </p><a href="#" class="btn btn--sm btn--secondary">Ver más<span class="fa fa-angle-right"></span></a>
                 </div>
               </div>
@@ -62,7 +68,9 @@
             <div class="dashboard__body">
               <div class="cols cols-gutter-2">
                 <div class="col-md-12"> 
-                  <div class="dashboard__map"> </div>
+                  <div class="dashboard__map">
+                    <div id="sectionmapbox" class="dashboard__map__map sectionmapbox"></div>
+                  </div>
                 </div>
                 <div class="col-md-4"> 
                   <div class="dashboard__card dashboard__card--bg">
@@ -71,7 +79,7 @@
                     </div>
                     <div class="dashboard__card__body">
                       <h4>Crear nuevo proyecto </h4>
-                      <p>Luctus velit mauris viverra conubia platea vitae vehicula habitant arcu leo donec.
+                      <p>Aptent enim molestie integer porttitor ullamcorper ut in habitant est et sociosqu.
                       </p><a href="new-project.html" class="btn btn--sm btn--white">Comenzar</a>
                     </div>
                   </div>
@@ -80,7 +88,7 @@
                   <div class="dashboard__card">
                     <div class="dashboard__card__body">
                       <h4>Crear nuevo proyecto </h4>
-                      <p>Lacus sem class mattis mollis ornare enim tristique semper interdum non egestas.
+                      <p>Senectus non congue varius ornare tortor proin egestas mauris lacus phasellus dui.
                       </p><a href="#" class="btn btn--sm btn--white">Comenzar</a>
                     </div>
                   </div>
@@ -89,7 +97,7 @@
                   <div class="dashboard__card">
                     <div class="dashboard__card__body">
                       <h4>Crear nuevo proyecto </h4>
-                      <p>Morbi nulla enim ullamcorper convallis consequat praesent ultrices pretium vel integer turpis.
+                      <p>Consequat posuere rhoncus phasellus dictumst tristique risus duis duis eros dictum commodo.
                       </p><a href="#" class="btn btn--sm btn--white">Comenzar</a>
                     </div>
                   </div>

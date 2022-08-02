@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <link href="img/favicon.png" rel="shortcut icon">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href="css/main.css?v=92186" rel="stylesheet" type="text/css">
-    <script src="js/main.js?v=92186" type="text/javascript"></script>
+    <link href="css/main.css?v=53664" rel="stylesheet" type="text/css">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css" rel="stylesheet">
+    <script src="js/main.js?v=53664" type="text/javascript"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js"></script>
     <!-- Meta tags facebook-->
     <meta property="og:title" content="#">
     <meta property="og:description" content="#">
@@ -19,6 +21,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&amp;display=swap" rel="stylesheet">
+    <!--mapbox-->
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js"></script>
+    <script src="https://unpkg.com/es6-promise@4.2.4/dist/es6-promise.auto.min.js"></script>
+    <script src="https://unpkg.com/@mapbox/mapbox-sdk/umd/mapbox-sdk.min.js"></script>
   </head>
   <body>
     <div id="sections">
@@ -52,7 +58,7 @@
                 </div>
                 <div class="dashboard__help__body">
                   <h4>¿Necesitas ayuda?</h4>
-                  <p>Elit a hac tellus quisque curae venenatis placerat mi diam netus quisque mauris integer colus.
+                  <p>Dapibus congue tempor ligula eleifend ut lectus sagittis eu nisl velit erat scelerisque nostra colus.
                   </p><a href="#" class="btn btn--sm btn--secondary">Ver más<span class="fa fa-angle-right"></span></a>
                 </div>
               </div>
@@ -68,7 +74,7 @@
                     </div>
                     <div class="dashboard__headercard__body"> 
                       <h2>Glosario </h2>
-                      <p>Tortor ad quis nibh rhoncus pellentesque odio tristique magna adipiscing donec consectetur pretium morbi velit.
+                      <p>Etiam massa et ut donec lectus himenaeos volutpat nullam purus arcu facilisis quisque velit adipiscing.
                       </p>
                     </div>
                   </div>
@@ -99,7 +105,7 @@
                             <div class="dashboard__item__icon"> <img src="img/icons/icon-permission.svg"></div>
                             <div class="dashboard__item__body"> 
                               <h4>Administrativo</h4>
-                              <p>Nisi hac elit ultricies habitant iaculis quisque luctus ultrices iaculis aliquet curabitur.
+                              <p>Porttitor suspendisse erat justo rhoncus arcu pulvinar hac nisi gravida donec adipiscing.
                               </p><a href="single-blog.html" class="btn btn--sm">Ver más<span class="fa fa-angle-right"></span></a>
                             </div>
                           </div>
@@ -110,7 +116,7 @@
                             <div class="dashboard__item__icon"> <img src="img/icons/icon-permission.svg"></div>
                             <div class="dashboard__item__body"> 
                               <h4>Certificados, resoluciones u otros</h4>
-                              <p>Id pretium semper erat venenatis felis bibendum curabitur pretium vestibulum egestas vestibulum.
+                              <p>Venenatis hac pellentesque a arcu lectus integer lacinia vulputate vulputate ac habitasse.
                               </p><a href="single-blog.html" class="btn btn--sm">Ver más<span class="fa fa-angle-right"></span></a>
                             </div>
                           </div>
@@ -121,7 +127,7 @@
                             <div class="dashboard__item__icon"> <img src="img/icons/icon-permission.svg"></div>
                             <div class="dashboard__item__body"> 
                               <h4>Técnico</h4>
-                              <p>Et imperdiet imperdiet interdum himenaeos ultricies mollis litora conubia tristique pharetra taciti.
+                              <p>Condimentum non conubia faucibus elementum euismod netus himenaeos adipiscing non vivamus litora.
                               </p><a href="single-blog.html" class="btn btn--sm">Ver más<span class="fa fa-angle-right"></span></a>
                             </div>
                           </div>
@@ -132,7 +138,7 @@
                             <div class="dashboard__item__icon"> <img src="img/icons/icon-permission.svg"></div>
                             <div class="dashboard__item__body"> 
                               <h4>Administrativo</h4>
-                              <p>Nibh curae nostra erat etiam orci hendrerit aliquam iaculis velit massa eu.
+                              <p>Arcu elit curae elementum luctus venenatis facilisis posuere quisque taciti lobortis facilisis.
                               </p><a href="single-blog.html" class="btn btn--sm">Ver más<span class="fa fa-angle-right"></span></a>
                             </div>
                           </div>
@@ -143,7 +149,7 @@
                             <div class="dashboard__item__icon"> <img src="img/icons/icon-permission.svg"></div>
                             <div class="dashboard__item__body"> 
                               <h4>Certificados, resoluciones u otros</h4>
-                              <p>Dapibus quisque vel aliquet tellus vivamus molestie semper interdum velit suspendisse vel.
+                              <p>A etiam urna pellentesque curabitur id malesuada egestas ullamcorper accumsan convallis auctor.
                               </p><a href="single-blog.html" class="btn btn--sm">Ver más<span class="fa fa-angle-right"></span></a>
                             </div>
                           </div>
@@ -154,7 +160,7 @@
                             <div class="dashboard__item__icon"> <img src="img/icons/icon-permission.svg"></div>
                             <div class="dashboard__item__body"> 
                               <h4>Técnico</h4>
-                              <p>Est sed massa imperdiet platea blandit ut vestibulum quisque blandit colus suspendisse.
+                              <p>Aenean primis tellus nostra sed egestas suspendisse primis vulputate nam lectus lacus.
                               </p><a href="single-blog.html" class="btn btn--sm">Ver más<span class="fa fa-angle-right"></span></a>
                             </div>
                           </div>
@@ -165,7 +171,7 @@
                             <div class="dashboard__item__icon"> <img src="img/icons/icon-permission.svg"></div>
                             <div class="dashboard__item__body"> 
                               <h4>Administrativo</h4>
-                              <p>Per scelerisque accumsan quam blandit laoreet aptent quam habitasse hendrerit porttitor cursus.
+                              <p>Dui eget taciti libero etiam felis bibendum inceptos auctor massa curae sed.
                               </p><a href="single-blog.html" class="btn btn--sm">Ver más<span class="fa fa-angle-right"></span></a>
                             </div>
                           </div>
@@ -176,7 +182,7 @@
                             <div class="dashboard__item__icon"> <img src="img/icons/icon-permission.svg"></div>
                             <div class="dashboard__item__body"> 
                               <h4>Certificados, resoluciones u otros</h4>
-                              <p>Curae porttitor curabitur enim eu consectetur justo colus eu nec augue aliquam.
+                              <p>Mattis viverra colus leo congue et dapibus et rhoncus semper iaculis imperdiet.
                               </p><a href="single-blog.html" class="btn btn--sm">Ver más<span class="fa fa-angle-right"></span></a>
                             </div>
                           </div>
@@ -187,7 +193,7 @@
                             <div class="dashboard__item__icon"> <img src="img/icons/icon-permission.svg"></div>
                             <div class="dashboard__item__body"> 
                               <h4>Técnico</h4>
-                              <p>Id vehicula consectetur sociosqu elementum sem nec aenean posuere tortor congue euismod.
+                              <p>Faucibus risus curabitur aliquet felis purus eleifend vitae senectus interdum tortor nulla.
                               </p><a href="single-blog.html" class="btn btn--sm">Ver más<span class="fa fa-angle-right"></span></a>
                             </div>
                           </div>
@@ -198,7 +204,7 @@
                             <div class="dashboard__item__icon"> <img src="img/icons/icon-permission.svg"></div>
                             <div class="dashboard__item__body"> 
                               <h4>Administrativo</h4>
-                              <p>Tellus gravida imperdiet consequat aliquam nullam faucibus sollicitudin quisque malesuada litora consequat.
+                              <p>Purus sapien ultrices blandit dui pulvinar diam vulputate quisque per himenaeos massa.
                               </p><a href="single-blog.html" class="btn btn--sm">Ver más<span class="fa fa-angle-right"></span></a>
                             </div>
                           </div>
@@ -209,7 +215,7 @@
                             <div class="dashboard__item__icon"> <img src="img/icons/icon-permission.svg"></div>
                             <div class="dashboard__item__body"> 
                               <h4>Certificados, resoluciones u otros</h4>
-                              <p>Eros feugiat tempus suspendisse donec sagittis tristique sagittis ultrices vel donec sollicitudin.
+                              <p>Gravida senectus tellus faucibus eget ligula ad et quisque nisi quisque arcu.
                               </p><a href="single-blog.html" class="btn btn--sm">Ver más<span class="fa fa-angle-right"></span></a>
                             </div>
                           </div>
@@ -220,7 +226,7 @@
                             <div class="dashboard__item__icon"> <img src="img/icons/icon-permission.svg"></div>
                             <div class="dashboard__item__body"> 
                               <h4>Técnico</h4>
-                              <p>Vitae nisl quam venenatis praesent aptent vivamus nibh massa lectus consectetur tempus.
+                              <p>Habitant mollis augue maecenas justo vestibulum mollis placerat adipiscing at mi himenaeos.
                               </p><a href="single-blog.html" class="btn btn--sm">Ver más<span class="fa fa-angle-right"></span></a>
                             </div>
                           </div>
@@ -231,7 +237,7 @@
                             <div class="dashboard__item__icon"> <img src="img/icons/icon-permission.svg"></div>
                             <div class="dashboard__item__body"> 
                               <h4>Administrativo</h4>
-                              <p>Eros est fermentum aenean ante hendrerit condimentum vulputate pulvinar posuere inceptos nam.
+                              <p>Elit rhoncus fusce platea lobortis leo nulla potenti senectus cras morbi platea.
                               </p><a href="single-blog.html" class="btn btn--sm">Ver más<span class="fa fa-angle-right"></span></a>
                             </div>
                           </div>
@@ -242,7 +248,7 @@
                             <div class="dashboard__item__icon"> <img src="img/icons/icon-permission.svg"></div>
                             <div class="dashboard__item__body"> 
                               <h4>Certificados, resoluciones u otros</h4>
-                              <p>Ultrices nulla dictumst enim in iaculis vitae nullam commodo curae aliquam consectetur.
+                              <p>Sed vehicula volutpat aliquet euismod odio iaculis volutpat conubia elit sollicitudin aptent.
                               </p><a href="single-blog.html" class="btn btn--sm">Ver más<span class="fa fa-angle-right"></span></a>
                             </div>
                           </div>
@@ -253,7 +259,7 @@
                             <div class="dashboard__item__icon"> <img src="img/icons/icon-permission.svg"></div>
                             <div class="dashboard__item__body"> 
                               <h4>Técnico</h4>
-                              <p>Aliquet bibendum iaculis pharetra ut praesent lobortis venenatis nisl velit lacinia curae.
+                              <p>Fames nec lectus aenean enim tincidunt praesent sapien orci eu fames commodo.
                               </p><a href="single-blog.html" class="btn btn--sm">Ver más<span class="fa fa-angle-right"></span></a>
                             </div>
                           </div>
@@ -264,7 +270,7 @@
                             <div class="dashboard__item__icon"> <img src="img/icons/icon-permission.svg"></div>
                             <div class="dashboard__item__body"> 
                               <h4>Administrativo</h4>
-                              <p>Elementum auctor senectus nibh dictum netus blandit tempus vivamus curabitur dapibus ut.
+                              <p>Condimentum imperdiet imperdiet eu consectetur ut integer viverra ut tellus porta aliquet.
                               </p><a href="single-blog.html" class="btn btn--sm">Ver más<span class="fa fa-angle-right"></span></a>
                             </div>
                           </div>
@@ -275,7 +281,7 @@
                             <div class="dashboard__item__icon"> <img src="img/icons/icon-permission.svg"></div>
                             <div class="dashboard__item__body"> 
                               <h4>Certificados, resoluciones u otros</h4>
-                              <p>Porta cras neque quisque malesuada fringilla diam conubia a sociosqu dictumst vestibulum.
+                              <p>Curae lacus mattis turpis felis varius duis fringilla in habitasse rutrum nibh.
                               </p><a href="single-blog.html" class="btn btn--sm">Ver más<span class="fa fa-angle-right"></span></a>
                             </div>
                           </div>
@@ -286,7 +292,7 @@
                             <div class="dashboard__item__icon"> <img src="img/icons/icon-permission.svg"></div>
                             <div class="dashboard__item__body"> 
                               <h4>Técnico</h4>
-                              <p>Pulvinar libero donec velit eu vulputate magna vestibulum conubia dictum ultrices fusce.
+                              <p>Convallis pretium auctor class condimentum odio colus lectus aenean in suscipit colus.
                               </p><a href="single-blog.html" class="btn btn--sm">Ver más<span class="fa fa-angle-right"></span></a>
                             </div>
                           </div>
@@ -297,7 +303,7 @@
                             <div class="dashboard__item__icon"> <img src="img/icons/icon-permission.svg"></div>
                             <div class="dashboard__item__body"> 
                               <h4>Administrativo</h4>
-                              <p>Eu aliquet volutpat convallis interdum vulputate non luctus consectetur viverra vel tincidunt.
+                              <p>Facilisis fringilla tortor hac gravida feugiat placerat ligula arcu litora tristique convallis.
                               </p><a href="single-blog.html" class="btn btn--sm">Ver más<span class="fa fa-angle-right"></span></a>
                             </div>
                           </div>
@@ -308,7 +314,7 @@
                             <div class="dashboard__item__icon"> <img src="img/icons/icon-permission.svg"></div>
                             <div class="dashboard__item__body"> 
                               <h4>Certificados, resoluciones u otros</h4>
-                              <p>Quisque pretium mattis quisque lobortis curae pulvinar luctus urna convallis ultricies gravida.
+                              <p>Potenti phasellus conubia integer tempus adipiscing venenatis ligula dapibus taciti habitasse velit.
                               </p><a href="single-blog.html" class="btn btn--sm">Ver más<span class="fa fa-angle-right"></span></a>
                             </div>
                           </div>
@@ -319,7 +325,7 @@
                             <div class="dashboard__item__icon"> <img src="img/icons/icon-permission.svg"></div>
                             <div class="dashboard__item__body"> 
                               <h4>Técnico</h4>
-                              <p>Sociosqu quam dui euismod pellentesque habitasse erat nostra magna aliquet quis felis.
+                              <p>Ultrices taciti aliquet nulla turpis eros vivamus nisl egestas praesent rutrum laoreet.
                               </p><a href="single-blog.html" class="btn btn--sm">Ver más<span class="fa fa-angle-right"></span></a>
                             </div>
                           </div>
